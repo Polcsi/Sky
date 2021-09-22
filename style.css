@@ -124,7 +124,7 @@ button:hover {
 
 @keyframes cloud2 
 {
-    from { top: 60%; left: -150px;}
+    from { top: 60%; left: -200px;}
     to { top: 60%; left: 100%;}
 }
 
