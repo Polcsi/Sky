@@ -102,12 +102,12 @@ button:hover {
     background-size: cover;
     width: 500px;
     height: 300px;
-    animation: 180s cloud1 linear infinite ;
+    animation: 200s cloud1 linear infinite ;
 }
 
 @keyframes cloud1 
 {
-    from { top: 20px; left: -300px;}
+    from { top: 20px; left: -400px;}
     to { top: 20px; left: 100%;}
 }
 
@@ -124,8 +124,8 @@ button:hover {
 
 @keyframes cloud2 
 {
-    from { top: 70%; right: -300px;}
-    to { top: 70%; right: 100%;}
+    from { top: 60%; left: -300px;}
+    to { top: 60%; left: 100%;}
 }
 
 .cloud3 {
