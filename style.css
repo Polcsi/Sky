@@ -129,8 +129,8 @@ button:hover {
 
 @keyframes cloud2 
 {
-    from { bottom: 30px; left: -200px;}
-    to { bottom: 30px; left: 100%;}
+    from { bottom: 0px; left: -200px;}
+    to { bottom: 0px; left: 100%;}
 }
 
 .cloud3 {
