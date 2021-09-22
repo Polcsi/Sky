@@ -22,6 +22,8 @@ body {
   align-items: center;
   background-image: linear-gradient(var(--night-sky));
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   animation: sunset 10s linear infinite;
 }
 
