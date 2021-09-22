@@ -271,4 +271,8 @@ button:hover {
       bottom: 0;
       top: auto;
   }
+  .star4 {
+      width: 2px;
+      height: 2px;
+  }
 }
