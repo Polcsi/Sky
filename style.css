@@ -1,9 +1,15 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 *, *::after, *::before {
   box-sizing: inherit;
+}
+*{
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
@@ -22,9 +28,8 @@ body {
   align-items: center;
   background-image: linear-gradient(var(--night-sky));
   overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
   animation: sunset 10s linear infinite;
+  position: relative;
 }
 
 /* @keyframes sunset
@@ -124,8 +129,8 @@ button:hover {
 
 @keyframes cloud2 
 {
-    from { top: 60%; left: -200px;}
-    to { top: 60%; left: 100%;}
+    from { bottom: 30px; left: -200px;}
+    to { bottom: 30px; left: 100%;}
 }
 
 .cloud3 {
