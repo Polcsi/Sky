@@ -40,7 +40,7 @@ body {
 
 button {
     position: absolute;
-    top: 0;
+    top: 10px;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -48,6 +48,7 @@ button {
     background: transparent;
     border: 3px solid white;
     color: white;
+    cursor: pointer;
     border-radius: 30px;
     padding: 5px 20px 5px 20px;
     box-shadow: 
@@ -61,12 +62,21 @@ button {
 }
 
 button:hover {
-    background: white;
-    color: black;
+    transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(1.05);
 }
 
 #nightbtn {
     display: none;
+}
+
+#ct {
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
 }
 
 .orb {
@@ -88,7 +98,7 @@ button:hover {
         box-shadow: 0 0 4px #FFE000, 0 0 60px 6px #FFE000;
     }
     50% {
-        box-shadow: 0 0 40px #FFE000, 0 0 200px 10px #FFE000;
+        box-shadow: 0 0 60px #FFE000, 0 0 200px 10px #FFE000;
     }
     100% {
         box-shadow: 0 0 4px #FFE000, 0 0 60px 6px #FFE000
@@ -112,8 +122,8 @@ button:hover {
 
 @keyframes cloud1 
 {
-    from { top: 20px; left: -400px;}
-    to { top: 20px; left: 100%;}
+    from { top: 20px; right: -300px;}
+    to { top: 20px; right: 100%;}
 }
 
 .cloud2 {
@@ -275,11 +285,14 @@ button:hover {
     top: 63%;
   }
   button {
-      bottom: 0;
+      bottom: 10px;
       top: auto;
   }
   .star4 {
       width: 2px;
       height: 2px;
+  }
+  #ct {
+    font-size: .9rem;
   }
 }
