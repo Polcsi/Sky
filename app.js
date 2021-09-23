@@ -5,6 +5,9 @@ const moon = document.querySelector('.moon');
 const clouds = document.querySelector('.cloud');
 const stars = document.querySelector('.stars');
 var potd = "";
+var check = null;
+var firstClick = true;
+var secondClick = true;
 
 function setDay(param)
 {
@@ -31,10 +34,32 @@ function setNight()
 
 daybtn.onclick = () => {
     setDay(potd);
+    clearInterval(check);
+    if(firstClick)
+    {
+        check = setInterval(checkTime, 20000);
+        firstClick = false;
+    } else if(secondClick) {
+        check = setInterval(checkTime, 60000);
+        secondClick = false;
+    } else {
+        check = null;
+    }
 }
 
 nightbtn.onclick = () => {
     setNight();
+    clearInterval(check);
+    if(firstClick)
+    {
+        check = setInterval(checkTime, 20000);
+        firstClick = false;
+    } else if(secondClick) {
+        check = setInterval(checkTime, 60000);
+        secondClick = false;
+    } else {
+        check = null;
+    }
 }
 
 function checkTime()
@@ -47,6 +72,7 @@ function checkTime()
         potd = "day";
         setDay("day");
     }else if(time > "18:00:00" && time < "20:00:00") {
+        console.log("Good Sunset!");
         potd = "sunset";
         setDay("sunset");
     } else if(time > "19:00:00" && time < "07:00:00") {
@@ -56,6 +82,7 @@ function checkTime()
 }
 
 checkTime();
+check = setInterval(checkTime, 3000);
 
 function display_c()
 {
