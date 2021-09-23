@@ -32,12 +32,6 @@ body {
   position: relative;
 }
 
-/* @keyframes sunset
-{
-    0%{ background-image: linear-gradient(var(--day-sky));}
-    100% { background-image: linear-gradient(var(--sunset-sky));}
-} */
-
 button {
     position: absolute;
     top: 10px;
@@ -59,10 +53,6 @@ button {
     text-shadow: 0 1px 5px black;
     z-index: 1000;
     transition: all ease-in-out 100ms;
-}
-
-button:hover {
-    transform: translateY(-2px);
 }
 
 button:active {

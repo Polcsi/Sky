@@ -4,10 +4,12 @@ const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
 const clouds = document.querySelector('.cloud');
 const stars = document.querySelector('.stars');
+var potd = "";
 
-function setDay()
+function setDay(param)
 {
-    document.body.style.backgroundImage = "linear-gradient(var(--day-sky)";
+    if(param === "day"){document.body.style.backgroundImage = "linear-gradient(var(--day-sky)";}
+    if(param === "sunset"){document.body.style.backgroundImage = "linear-gradient(var(--sunset-sky)";}
     moon.style.display = "none";
     sun.style.display = "unset"
     clouds.style.display = "unset";
@@ -28,7 +30,7 @@ function setNight()
 }
 
 daybtn.onclick = () => {
-    setDay();
+    setDay(potd);
 }
 
 nightbtn.onclick = () => {
@@ -39,10 +41,14 @@ function checkTime()
 {
     const time = new Date().toLocaleTimeString();
     console.log(time);
-    if(time > "07:00:00" && time < "19:00:00")
+    if(time > "07:00:00" && time < "18:00:00")
     {
         console.log("Good Day!");
-        setDay();
+        potd = "day";
+        setDay("day");
+    }else if(time > "18:00:00" && time < "20:00:00") {
+        potd = "sunset";
+        setDay("sunset");
     } else if(time > "19:00:00" && time < "07:00:00") {
         console.log("Good night!");
         setNight();
